@@ -78,7 +78,11 @@ namespace erp_mini_serial
     } // namespace RX
 
     // Speed(m/s) -> Raw byte command
-    static constexpr double MPS2BYTE {100.0};
+    // Percentage (Max speed : 1.68 m/s)
+    // 1000
+    // ---- = 595.238095238
+    // 1.68
+    static constexpr double MPS2BYTE {595.238095238};
 
     // Steering(rad) -> Raw byte command
     static constexpr double RAD2BYTE {100.0};
