@@ -13,7 +13,7 @@ $ ros2 launch erp_mini_serial serial_bridge.launch.py
 ### Topic / Service Names
 | Interface | Entitiy      | Type                                 | Name                          | Description                                      |
 | --------- | ------------ | ------------------------------------ |------------------------------ | ------------------------------------------------ |
-| Topic     | Subscription | **erp_mini_msgs/msg/ControlCommand** | **/erp_mini/control_command** | Control command includes speed, steering, brake  |
+| Topic     | Subscription | **erp_mini_msgs/msg/ControlCommand** | **/erp_mini/control_command** | Control command includes speed, steering         |
 | Topic     | Publisher    | **erp_mini_msgs/msg/Feedback**       | **/erp_mini/feedback**        | Feedback from ERP Mini                           |
 | Servie    | Server       | **erp_mini_msgs/srv/ModeCommand**    | **/erp_mini/mode_command**    | Mode command includes control mode, E-stop, gear |
 
