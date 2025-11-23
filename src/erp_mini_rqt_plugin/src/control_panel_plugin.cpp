@@ -86,15 +86,15 @@ void erp_mini_rqt_plugin::ControlPanelPlugin::initPlugin(qt_gui_cpp::PluginConte
 
     bind_slider_spin_box(
         control_panel_widget_->speed_slider, control_panel_widget_->speed_spin_box,
-        0.0, 1.0, 0.1
+        0.0, 1.6, 0.1
     );
 
     bind_slider_spin_box(
         control_panel_widget_->steering_slider, control_panel_widget_->steering_spin_box,
-         -17.0, 17.0, 1.0
+         -16.0, 16.0, 1.0
     );
 
-    control_panel_widget_->steering_slider->setValue(17);
+    control_panel_widget_->steering_slider->setValue(16);
 
     // Timer
     timer_ = node_->create_wall_timer(
@@ -249,7 +249,7 @@ void erp_mini_rqt_plugin::ControlPanelPlugin::on_apply_mode_command()
     }
 
     // Gear
-    if(control_panel_widget_->drive_button->isChecked())
+    if(control_panel_widget_->forward_button->isChecked())
     {
         mode_command_request->gear = erp_mini_msgs::srv::ModeCommand::Request::GEAR_FORWARD;
     }
@@ -257,7 +257,7 @@ void erp_mini_rqt_plugin::ControlPanelPlugin::on_apply_mode_command()
     {
         mode_command_request->gear = erp_mini_msgs::srv::ModeCommand::Request::GEAR_NEUTRAL;
     }
-    else if(control_panel_widget_->reverse_button->isChecked())
+    else if(control_panel_widget_->backward_button->isChecked())
     {
         mode_command_request->gear = erp_mini_msgs::srv::ModeCommand::Request::GEAR_BACKWARD;
     }
