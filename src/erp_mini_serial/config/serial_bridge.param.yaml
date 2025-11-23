@@ -4,7 +4,7 @@ serial_bridge:
   ros__parameters:
 
     # Serial port settings
-    port_path: "/dev/ttyUSB0"
+    port_path: "/dev/ttyS0"
     baud_rate: 115200
 
     # ERP Mini parameters

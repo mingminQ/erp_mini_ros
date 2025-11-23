@@ -68,10 +68,10 @@ namespace erp_mini_serial
             SPEED_RAW_1    = 7,
             STEERING_100_0 = 8,
             STEERING_100_1 = 9,
-            HEARTBEAT      = 10,
-            ETX_0          = 11,
-            ETX_1          = 12,
-            PACKET_SIZE    = 13
+            HEARTBEAT      = 14,
+            ETX_0          = 15,
+            ETX_1          = 16,
+            PACKET_SIZE    = 17
 
         }; // enum ByteName
 
@@ -85,13 +85,13 @@ namespace erp_mini_serial
     static constexpr double MPS2BYTE {595.238095238};
 
     // Steering(rad) -> Raw byte command
-    static constexpr double RAD2BYTE {100.0};
+    static constexpr double RAD2BYTE {-5729.57795131};
 
     // Raw byte command -> Speed (m/s)
-    static constexpr double BYTE2MPS {0.01};
+    static constexpr double BYTE2MPS {1.0}; // @ TODO
 
     // Raw byte command -> Steering (rad)
-    static constexpr double BYTE2RAD {0.01};
+    static constexpr double BYTE2RAD {-0.00017453292};
 
 } // namespace erp_mini_serial
 

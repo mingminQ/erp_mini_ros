@@ -194,8 +194,8 @@ void erp_mini_serial::SerialPort::initialize_port()
         throw erp_mini_util::Exception("SerialPort::initialize_port() Invalid baud_rate, use 9600 or 115200.");
     }
 
-    tty.c_cc[VMIN]  = 13;
-    tty.c_cc[VTIME] = 1;
+    tty.c_cc[VMIN]  = 17;
+    tty.c_cc[VTIME] = 0;
 
     if((tcsetattr(file_descriptor_, TCSANOW, &tty)) != 0)
     {
